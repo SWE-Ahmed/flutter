@@ -56,6 +56,7 @@ class SubView extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
+              // Text under Image...
               Text(
                 "New Airtags... Bidding starting at \$100",
                 style: TextStyle(
@@ -63,6 +64,24 @@ class SubView extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontFamily: "San Serif"),
               ),
+            ],
+          ),
+          const SizedBox(
+            height: 100,
+          ),
+          // the following column block adds the "Cash N Stash button" button to the app
+          Column(
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  textStyle: TextStyle(fontSize: 20),
+                  padding: EdgeInsets.all(16.0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                ),
+                child: const Text("Cash N Stash"),
+                onPressed: () {},
+              )
             ],
           )
         ],
