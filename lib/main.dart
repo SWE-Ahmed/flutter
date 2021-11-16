@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/main_view.dart';
 import 'package:project1/sub_view.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SubView(),
+      home: MainView(),
     );
   }
 }
