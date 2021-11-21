@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "241959563034",
+    "project_id": "bootcamp-app-fa225",
+    "storage_bucket": "bootcamp-app-fa225.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241959563034:android:c5d5e17eee3221932186a3",
+        "android_client_info": {
+          "package_name": "com.example.project1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241959563034-3s1m2vjame6u3ltd8g3o4nm6ue6q5jdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8GYlPSzljDYPj5wOeSuLsx5eDy5pJ2qM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241959563034-3s1m2vjame6u3ltd8g3o4nm6ue6q5jdq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "241959563034-m1k9sd5sdpiap1k0uoa1d675tg4lp12a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.project1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
