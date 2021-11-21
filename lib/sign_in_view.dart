@@ -1,13 +1,14 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project1/constants.dart';
-import 'package:project1/main_view.dart';
 import 'package:project1/services/auth.dart';
 import 'package:project1/sign_up_view.dart';
 import 'package:project1/wrapper.dart';
 
 class SignInView extends StatefulWidget {
-  SignInView({Key key}) : super(key: key);
+  const SignInView({Key key}) : super(key: key);
 
   @override
   State<SignInView> createState() => _SignInViewState();

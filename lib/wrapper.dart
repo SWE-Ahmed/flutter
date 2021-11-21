@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:project1/main_view.dart';
 import 'package:project1/services/auth.dart';
@@ -12,7 +14,8 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     if (_isSignedIn) {
       return MainView();
-    } else
+    } else {
       return SignInView();
+    }
   }
 }

@@ -1,8 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
-import 'package:project1/sign_in_view.dart';
 import 'package:project1/wrapper.dart';
 
 void main() {
@@ -11,6 +12,8 @@ void main() {
 }
 
 class App extends StatefulWidget {
+  const App({Key key}) : super(key: key);
+
   // Create the initialization Future outside of `build`:
   @override
   _AppState createState() => _AppState();
