@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project1/constants.dart';
+import 'package:project1/profile.dart';
 import 'package:project1/services/auth.dart';
 import 'package:project1/sign_in_view.dart';
 import 'package:project1/sub_view.dart';
@@ -38,29 +39,7 @@ class _MainViewState extends State<MainView> {
       // We use IndexedStack to control the flow from one view to another
       body: IndexedStack(
         index: currentIndex,
-        children: [
-          SubView(),
-          Container(
-            color: Colors.lightGreen[300],
-            child: Center(
-              child: MaterialButton(
-                height: 40,
-                onPressed: () {
-                  Auth.signOut();
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SignInView()));
-                },
-                color: Color(0xff5ACBFE),
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-          )
-        ],
+        children: [SubView(), ProfileView()],
       ),
     );
   }

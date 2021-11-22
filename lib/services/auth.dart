@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Auth {
@@ -29,11 +31,11 @@ class Auth {
     }
   }
 
-  static getUser() {
+  static User getUser() {
     return FirebaseAuth.instance.currentUser;
   }
 
-  static signOut() {
-    FirebaseAuth.instance.signOut();
+  static signOut() async {
+    await FirebaseAuth.instance.signOut();
   }
 }

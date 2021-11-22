@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project1/constants.dart';
-import 'package:project1/main_view.dart';
 import 'package:project1/services/auth.dart';
 import 'package:project1/sign_in_view.dart';
 import 'package:project1/wrapper.dart';
@@ -105,11 +104,26 @@ class _SignUpViewState extends State<SignUpView> {
                     ),
                   ),
                   SizedBox(height: 10),
+                  // sign up button
                   MaterialButton(
                     height: 40,
-                    onPressed: () {
-                      Auth.reg(email, password);
-                      Wrapper();
+                    onPressed: () async {
+                      if (!(email == null && password == null)) {
+                        await Auth.reg(email, password);
+                        print('registered');
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => Wrapper()));
+                      } else {
+                        // returns a snackbar at the bottom to alert the user to enter correct email and password
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(
+                            'Please enter correct email and password',
+                            style: TextStyle(
+                                fontFamily: 'Times New Roman', fontSize: 20),
+                          ),
+                          backgroundColor: Colors.lightBlue[300],
+                        ));
+                      }
                     },
                     color: Color(0xff5ACBFE),
                     child: Text(

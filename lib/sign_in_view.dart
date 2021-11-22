@@ -92,11 +92,26 @@ class _SignInViewState extends State<SignInView> {
                     ),
                   ),
                   SizedBox(height: 30),
+                  // Login button ----
                   MaterialButton(
                     height: 40,
                     onPressed: () async {
-                      await Auth.signIn(email, password);
-                      Wrapper();
+                      if (!(email == null && password == null)) {
+                        await Auth.signIn(email, password);
+                        // the navigator of the app is forced to build the specific widget/view
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => Wrapper()));
+                      } else {
+                        // returns a snackbar at the bottom to alert the user to enter credentials
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(
+                            'Please enter both email and password. If you dont have an account, create one by pressing sign up!',
+                            style: TextStyle(
+                                fontFamily: 'Times New Roman', fontSize: 20),
+                          ),
+                          backgroundColor: Colors.lightBlue[300],
+                        ));
+                      }
                     },
                     color: Color(0xff5ACBFE),
                     child: Text(
