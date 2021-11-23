@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:project1/services/auth.dart';
-import 'package:project1/sign_in_view.dart';
+import 'package:project1/views/sign_in_view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key key}) : super(key: key);

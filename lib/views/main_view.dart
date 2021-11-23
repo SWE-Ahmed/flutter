@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project1/constants.dart';
-import 'package:project1/profile.dart';
+import 'package:project1/views/profile.dart';
 import 'package:project1/services/auth.dart';
-import 'package:project1/sign_in_view.dart';
-import 'package:project1/sub_view.dart';
+import 'package:project1/views/sign_in_view.dart';
+import 'package:project1/views/sub_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key key}) : super(key: key);
