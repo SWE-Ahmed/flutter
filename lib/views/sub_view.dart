@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:project1/components/post.dart';
 import 'package:project1/constants.dart';
+import 'package:project1/views/add_post.dart';
 
 class SubView extends StatelessWidget {
   const SubView({Key key}) : super(key: key);
@@ -21,7 +22,13 @@ class SubView extends StatelessWidget {
               // the sized box adds an empty box for allignment purposes
               width: 10,
             ),
-            SvgPicture.asset(kMessengerSvg)
+            GestureDetector(
+              child: Icon(Icons.share),
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => AddPost()));
+              },
+            )
           ]),
       // wraps the first column picture in a column
       body: SingleChildScrollView(
